@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Strength Checker</title>
+  <link rel="stylesheet" href="drag.css">
+</head>
+
+<header>
+    <h1>NetWise</h1>
+</header>
+
+<body>
+    <div class="container">
+        <h1>Drag and Drop Password to Check Strength</h1>
+      
+        <div class="password-boxes">
+          <div id="weak-box" class="box weak" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>Weak Password</h2>
+            <div class="password-container">
+            <br><br><br><br>
+            </div>
+          </div>
+      
+          <div id="strong-box" class="box strong" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>Strong Password</h2>
+            <div class="password-container">
+            <br><br><br><br>
+            </div>
+          </div>
+        </div>
+      
+        <div class="passwords">
+          <div id="password1" class="password" draggable="true" ondragstart="drag(event)">
+            password
+          </div>
+          <div id="password2" class="password" draggable="true" ondragstart="drag(event)">
+            12345
+          </div>
+          <div id="password4" class="password" draggable="true" ondragstart="drag(event)">
+            H2f94?el
+          </div>
+          <div id="password5" class="password" draggable="true" ondragstart="drag(event)">
+            q!3rtYuiop
+          </div>
+          <div id="password6" class="password" draggable="true" ondragstart="drag(event)">
+            1A$y6D8!z
+          </div>
+          <div id="password7" class="password" draggable="true" ondragstart="drag(event)">
+            redsfan2
+          </div>
+          <div id="password8" class="password" draggable="true" ondragstart="drag(event)">
+            Gkl38?!fje
+          </div>
+          <div id="password9" class="password" draggable="true" ondragstart="drag(event)">
+            ilovedogs
+          </div>
+        </div>
+      
+        
+        <button id="reset-btn" onclick="resetPasswords()">Reset</button>
+        <br>
+
+        <button id="Exit" onclick="window.location.href='labs.html';">Exit</button>
+        
+        <div id="popup" class="popup"></div>
+      </div>
+      
+      <script src="drag.js"></script>
+
+</body>
+</html>

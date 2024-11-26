@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Netwise</title>
+    <link rel="stylesheet" href="module1.css">
+</head>
+
+<header>
+    <h1>NetWise</h1>
+</header>
+
+<body>
+    <div class="slideshow" id="welcomePage">
+        <div class="container1">
+            <div class="box1">
+                <br><br>
+                <h2>Introduction to Internet Safety</h2>
+                <br><br><br><br>
+                <button id="Start" onclick="showModulePage()">Start</button>
+                <br>
+                <button class="Exit" onclick="window.location.href='modules.html';">Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="slideshow" id="modulePage1" style="display: none;">
+        <div class="container2">
+
+            <div class="box2">
+                <h3>1/10</h3>
+                <button class="Exit1" onclick="window.location.href='module1.html';">Exit</button>
+                <br><br>
+
+                <b>Introduction to Internet Safety</b>
+                <br><br><br><br><br>
+
+                <p>
+                    Welcome to the "Introduction to Internet Safety" module! In today's digital age, being safe online
+                    is more important than ever. This module is designed specifically for seniors to help you navigate
+                    the internet confidently and securely.
+                </p>
+                <br><br><br><br><br><br>
+
+                <button class="nav-button left" onclick="back1()">← Previous</button>
+                <button class="nav-button right" onclick="next1()">Next →</button>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="slideshow" id="modulePage2" style="display: none;">
+        <div class="container3">
+
+            <div class="box3">
+                <h3>2/10</h3>
+                <button class="Exit1" onclick="window.location.href='module1.html';">Exit</button>
+                <br><br>
+
+                <b>What You'll Learn</b>
+                <br><br><br>
+
+                <ul>
+                    <li> Understanding Online Risks: Discover common threats you may encounter while browsing the internet, including scams and phishing. </li>
+                    <br>
+                    <li> Protecting Your Personal Information: Learn the importance of safeguarding your personal data and how to do it effictively </li>
+                    <br>
+                    <li> Basic Safety Practices: Familiarize yourself with essential online safety tips that will help you enjoy a safer internet experience </li>
+                </ul>
+                <br><br>
+
+                <button class="nav-button left" onclick="back2()">← Previous</button>
+                <button class="nav-button right" onclick="next2()">Next →</button>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="slideshow" id="modulePage3" style="display: none;">
+        <div class="container4">
+
+            <div class="box4">
+                <h3>3/10</h3>
+                <button class="Exit1" onclick="window.location.href='module1.html';">Exit</button>
+                <br><br>
+
+                <b>Ready to Start Learning?</b>
+                <br><br><br><br><br>
+
+                <p>
+                    Whether you're new to the internet or looking to refresh your knowledge, this module will provide you with the tools and knowledge you need to stay safe online. Let's get started on your journey to becoming a savvy and secure internet user!
+                    <br><br>
+                    Let's begin!
+                </p>
+                <br><br><br>
+
+                <button class="nav-button left" onclick="back3()">← Previous</button>
+                <button class="nav-button right" onclick="next3()">Next →</button>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="module1.js"></script>
+</body>
+</html>
