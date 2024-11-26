@@ -4,8 +4,11 @@
     box-sizing: border-box;
   }
  
-  header{
-    text-align: left;
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px; 
   }
 
   body {
