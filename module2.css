@@ -5,8 +5,11 @@
     border-radius: 25px;
   }
   
-  header{
-    text-align: left;
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px; 
   }
   
   /* Body Styling */
