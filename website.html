@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe vs Unsafe Websites</title>
+  <link rel="stylesheet" href="website.css">
+</head>
+
+<header>
+    <h1>NetWise</h1>
+</header>
+
+<body>
+  <div class="container">
+
+    <div class="container1">
+
+    <h1>Drag and Drop: Safe vs. Unsafe Websites</h1>
+        <br>
+    <div class="game-area">
+      <div class="categories">
+        <div class="category" id="safe-websites">
+          <h2>Safe Websites</h2>
+          <div class="drop-zone" id="safe-dropzone">
+            <p>Drag Safe Websites Here</p>
+          </div>
+        </div>
+
+        <div class="category" id="unsafe-websites">
+          <h2>Unsafe Websites</h2>
+          <div class="drop-zone" id="unsafe-dropzone">
+            <p>Drag Unsafe Websites Here</p>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="website-list">
+        <h3>Drag these websites:</h3>
+
+        <div class="website" id="website1" draggable="true" data-category="safe">
+          <p>https://urlgoeshere</p>
+        </div>
+
+        <div class="website" id="website2" draggable="true" data-category="unsafe">
+          <p>http://urlgoeshere</p>
+        </div>
+
+        <div class="website" id="website3" draggable="true" data-category="safe">
+          <p>https://urlgoeshere</p>
+        </div>
+
+        <div class="website" id="website4" draggable="true" data-category="unsafe">
+          <p>http://urlgoeshere</p>
+        </div>
+
+        <div class="website" id="website5" draggable="true" data-category="safe">
+          <p>https://urlgoeshere</p>
+        </div>
+
+        <div class="website" id="website6" draggable="true" data-category="unsafe">
+          <p>http://urlgoeshere</p>
+        </div>
+
+      </div>
+    </div>
+   
+    <div class="result">
+      <button onclick="checkResult()">Check Your Answers</button>
+      <button onclick="resetGame()">Reset</button>
+      <button class="Exit" onclick="window.location.href='labs.html';">Exit</button>
+      <p id="result-message"></p>
+    </div>
+  </div>
+</div>
+  <script src="website.js"></script>
+</body>
+</html>

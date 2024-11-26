@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px; /* Add some spacing inside the header */
+  }
+
+  body {
+    font-family: Tahoma;
+    background-color: rgb(245,249,242); /* Light Sage Green */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+  .container {
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    margin: 20px;
+  }
+ 
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+ 
+  .game-area {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background-color: rgb(220,225,216); /* Light gray background */
+    padding: 40px; /* Add padding inside the game area */
+    border-radius: 10px; /* Optional: Round the corners */
+}
+ 
+  .categories {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+ 
+  .category {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    min-height: 250px; /* Increased height for drop zones */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+ 
+  .drop-zone {
+    width: 90%;
+    min-height: 150px; /* Bigger height for drop zones */
+    background-color: #eaeaea;
+    margin-top: 10px;
+    border: 2px dashed #bbb;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+ 
+  .website-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+    padding: 10px;
+  }
+ 
+  .website {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+ 
+  .website p {
+    margin: 0;
+  }
+ 
+  button {
+    background-color: rgb(227, 227, 227);
+    border-color: rgb(170, 172, 169);
+    border-style: groove;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+ 
+  button:hover {
+    background-color: rgb(154, 155, 154);
+  }
+ 
+  .result {
+    margin-top: 20px;
+  }
+
+  .Exit{
+    float: right;
+  }
