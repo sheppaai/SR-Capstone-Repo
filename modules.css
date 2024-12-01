@@ -1,97 +1,129 @@
-/* General Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   border-radius: 25px;
 }
- 
+
 header {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 10px; 
+  padding: 10px;
 }
 
 /* Body Styling */
 body {
   font-family: Tahoma;
-  background-color: rgb(245,249,242); /* Light Sage Green */
+  background-color: rgb(245, 249, 242); /* Light Sage Green */
   text-align: center;
   padding: 20px;
 }
 
-a:link {
- color: Black;
- text-decoration: none;
- font-size: 30px;
-}
-
-a:visited {
-  color: Black;
+a {
+  color: inherit;
   text-decoration: none;
 }
- 
-a:hover {
-  color: #A1A2DA;
-}
- 
-.container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
-}
 
-h2{
-  text-align: center;
-  font-size: 65px;
-}
-
-.module li{
-color: black;
-text-align: center; 
-display: inline-flex;
-
-padding: 14px 20px;
-font-size: 18px;
-}
-
-.module-container {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 80px 250px;
-padding: 20px;
-max-width: 1500px;
-margin: 0 auto;
-}
-
-.module {
-background-color: rgb(220, 225, 216);
-width: 400px;
-height: 300px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-border-radius: 25px;
-text-align: center;
-padding: 20px;
-font-size: 18px;
+/* Navigation */
+nav ul {
+  list-style: none;
 }
 
 nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  font-size: 30px; /* Original font size for menu items */
   color: black;
-  text-align: center; 
-  display: inline-flex;
- 
-  padding: 14px 20px;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+  color: #a1a2da; /* Light up font on hover */
+}
+
+/* Modules */
+h2 {
+  font-size: 65px;
+  text-align: center;
+}
+
+.module-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px 250px;
+  padding: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.module {
+  background-color: rgb(220, 225, 216);
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  text-align: center;
+  padding: 20px;
   font-size: 18px;
+  position: relative; /* Ensures the link inside covers the entire module */
+}
+
+.module a {
+  position: absolute; /* Make the link cover the entire button */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.module p {
+  font-size: 18px; /* Same size as before */
+  color: black;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.module a:hover p {
+  color: #a1a2da; /* Light up font on hover */
+  transform: scale(1.1); /* Slightly increase the size on hover */
 }
 
 .module-icon {
   font-size: 50px;
   color: black;
   margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .module-container {
+    gap: 20px;
+  }
+
+  .module {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .module-container {
+    gap: 10px;
+  }
+
+  .module {
+    width: 100%; /* Stack modules vertically */
+  }
 }
