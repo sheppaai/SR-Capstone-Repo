@@ -162,272 +162,56 @@ function back16() {
     document.getElementById("quizpage5").style.display = "block";
 }
 
-// Quiz Buttons
-    let previousButton = null;
+let previousButton = null;
 
-    function correct() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button1 = document.getElementById("button1");
-        button1.style.backgroundColor = "green"; // Light up the button with green background
-        button1.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button1; // Update the previous button
+function highlightButton(buttonId, color) {
+    // Reset previous button's style if any
+    if (previousButton) {
+        previousButton.style.backgroundColor = ""; // Reset previous button background color
+        previousButton.style.color = ""; // Reset previous button text color
     }
 
-    function correct1() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button7 = document.getElementById("button7");
-        button7.style.backgroundColor = "green"; // Light up the button with green background
-        button7.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button7; // Update the previous button
-    }
+    // Get the button element and change its style
+    const button = document.getElementById(buttonId);
+    button.style.backgroundColor = color; // Set the background color (green or red)
+    button.style.color = "white"; // Change text color to white for better contrast
 
-    function correct2() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button10 = document.getElementById("button10");
-        button10.style.backgroundColor = "green"; // Light up the button with green background
-        button10.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button10; // Update the previous button
-    }
+    // Update previousButton
+    previousButton = button;
+}
 
-    function correct3() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button16 = document.getElementById("button16");
-        button16.style.backgroundColor = "green"; // Light up the button with green background
-        button16.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button16; // Update the previous button
-    }
+// Function for correct answers
+function correct(buttonId) {
+    highlightButton(buttonId, "green"); // Highlight the button with green for correct answer
+}
 
-    function correct4() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button20 = document.getElementById("button20");
-        button20.style.backgroundColor = "green"; // Light up the button with green background
-        button20.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button20; // Update the previous button
-    }
-
-    function correct5() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button23 = document.getElementById("button23");
-        button23.style.backgroundColor = "green"; // Light up the button with green background
-        button23.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button23; // Update the previous button
-    }
-
-    // Function to handle wrong answer for button 2
-    function wrong1() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button2 = document.getElementById("button2");
-        button2.style.backgroundColor = "red"; // Light up the button with red background
-        button2.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button2; // Update the previous button
-    }
-
-    // Function to handle wrong answer for button 3
-    function wrong2() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button3 = document.getElementById("button3");
-        button3.style.backgroundColor = "red"; // Light up the button with red background
-        button3.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button3; // Update the previous button
-    }
-
-    // Function to handle wrong answer for button 4
-    function wrong3() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button4 = document.getElementById("button4");
-        button4.style.backgroundColor = "red"; // Light up the button with red background
-        button4.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button4; // Update the previous button
-    }
-
-    function wrong4() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button5 = document.getElementById("button5");
-        button5.style.backgroundColor = "red"; // Light up the button with red background
-        button5.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button5; // Update the previous button
-    }
-
-    function wrong5() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button6 = document.getElementById("button6");
-        button6.style.backgroundColor = "red"; // Light up the button with red background
-        button6.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button6; // Update the previous button
-    }
-
-    function wrong6() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button8 = document.getElementById("button8");
-        button8.style.backgroundColor = "red"; // Light up the button with red background
-        button8.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button8; // Update the previous button
-    }
-
-    function wrong7() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button9 = document.getElementById("button9");
-        button9.style.backgroundColor = "red"; // Light up the button with red background
-        button9.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button9; // Update the previous button
-    }
-
-    function wrong8() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button11 = document.getElementById("button11");
-        button11.style.backgroundColor = "red"; // Light up the button with red background
-        button11.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button11; // Update the previous button
-    }
-
-    function wrong9() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button12 = document.getElementById("button12");
-        button12.style.backgroundColor = "red"; // Light up the button with red background
-        button12.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button12; // Update the previous button
-    }
-
-    function wrong10() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button13 = document.getElementById("button13");
-        button13.style.backgroundColor = "red"; // Light up the button with red background
-        button13.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button13; // Update the previous button
-    }
-
-    function wrong11() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button14 = document.getElementById("button14");
-        button14.style.backgroundColor = "red"; // Light up the button with red background
-        button14.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button14; // Update the previous button
-    }
-
-    function wrong12() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button15 = document.getElementById("button15");
-        button15.style.backgroundColor = "red"; // Light up the button with red background
-        button15.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button15; // Update the previous button
-    }
-
-    function wrong13() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button17 = document.getElementById("button17");
-        button17.style.backgroundColor = "red"; // Light up the button with red background
-        button17.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button17; // Update the previous button
-    }
-
-    function wrong14() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button18 = document.getElementById("button18");
-        button18.style.backgroundColor = "red"; // Light up the button with red background
-        button18.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button18; // Update the previous button
-    }
-
-    function wrong15() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button19 = document.getElementById("button19");
-        button19.style.backgroundColor = "red"; // Light up the button with red background
-        button19.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button19; // Update the previous button
-    }
-
-    function wrong16() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button21 = document.getElementById("button21");
-        button21.style.backgroundColor = "red"; // Light up the button with red background
-        button21.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button21; // Update the previous button
-    }
-
-    function wrong17() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button22 = document.getElementById("button22");
-        button22.style.backgroundColor = "red"; // Light up the button with red background
-        button22.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button22; // Update the previous button
-    }
-
-    function wrong18() {
-        if (previousButton) {
-            previousButton.style.backgroundColor = ""; // Reset previous button background color
-            previousButton.style.color = ""; // Reset previous button text color
-        }
-        const button24 = document.getElementById("button24");
-        button24.style.backgroundColor = "red"; // Light up the button with red background
-        button24.style.color = "white"; // Optional: Change text color for better contrast
-        previousButton = button24; // Update the previous button
-    }
+// Function for wrong answers
+function wrong(buttonId) {
+    highlightButton(buttonId, "red"); // Highlight the button with red for wrong answer
+}
+    function correct() { highlightButton("button1", "green"); }
+    function correct1() { highlightButton("button7", "green"); }
+    function correct2() { highlightButton("button10", "green"); }
+    function correct3() { highlightButton("button16", "green"); }
+    function correct4() { highlightButton("button20", "green"); }
+    function correct5() { highlightButton("button23", "green"); }
+    
+    // Wrong answers
+    function wrong1() { highlightButton("button2", "red"); }
+    function wrong2() { highlightButton("button3", "red"); }
+    function wrong3() { highlightButton("button4", "red"); }
+    function wrong4() { highlightButton("button5", "red"); }
+    function wrong5() { highlightButton("button6", "red"); }
+    function wrong6() { highlightButton("button8", "red"); }
+    function wrong7() { highlightButton("button9", "red"); }
+    function wrong8() { highlightButton("button11", "red"); }
+    function wrong9() { highlightButton("button12", "red"); }
+    function wrong10() { highlightButton("button13", "red"); }
+    function wrong11() { highlightButton("button14", "red"); }
+    function wrong12() { highlightButton("button15", "red"); }
+    function wrong13() { highlightButton("button17", "red"); }
+    function wrong14() { highlightButton("button18", "red"); }
+    function wrong15() { highlightButton("button19", "red"); }
+    function wrong16() { highlightButton("button21", "red"); }
+    function wrong17() { highlightButton("button22", "red"); }
+    function wrong18() { highlightButton("button24", "red"); }
