@@ -51,7 +51,7 @@ function next9() {
 }
 
 function quiz1() {
-    document.getElementById("modulePage10").style.display = "none";
+    document.getElementById("modulePage6").style.display = "none";
     document.getElementById("quizpage1").style.display = "block";
 }
 
@@ -134,7 +134,7 @@ function back10() {
 
 function back11() {
     document.getElementById("quizpage1").style.display = "none";
-    document.getElementById("modulePage10").style.display = "block";
+    document.getElementById("modulePage6").style.display = "block";
 }
 
 function back12() {
