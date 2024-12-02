@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legit vs Phishing Emails</title>
+  <link rel="stylesheet" href="phish.css">
+</head>
+
+<body>
+  <h2>Legit vs Phishing Emails</h2>
+  <p>Drag and drop the emails into the correct category.</p>
+  
+  <!-- Reset Button -->
+  <button onclick="resetGame()">Reset</button>
+  <button class="Exit1" onclick="window.location.href='labs.html';">Exit</button>
+  <!-- Popup -->
+  <div id="popup" class="popup"></div>
+  
+  <div class="container">
+    <!-- Legitimate Emails Drop Zone -->
+    <div id="legit-zone" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h3>Legitimate Emails</h3>
+    </div>
+
+    <!-- Phishing Emails Drop Zone -->
+    <div id="phishing-zone" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h3>Phishing Emails</h3>
+    </div>
+  </div>
+
+
+  <div class="email-cards">
+    <div class="email-card" id="email1" draggable="true" ondragstart="drag(event)">
+      <p><strong>Subject:</strong> Your Amazon Order Confirmation</p>
+      <p><strong>Sender:</strong> orders@amazon.com</p>
+      <p><strong>Content:</strong> Your order #12345 has been successfully processed.</p>
+      <p><strong>Link:</strong> www.amazon.com/order-details</p>
+    </div>
+
+    <div class="email-card" id="email3" draggable="true" ondragstart="drag(event)">
+      <p><strong>Subject:</strong> Your PayPal Receipt</p>
+      <p><strong>Sender:</strong> receipt@paypal.com</p>
+      <p><strong>Content:</strong> Thank you for your payment of $100.</p>
+      <p><strong>Link:</strong> www.paypal.com/payment-details</p>
+    </div>
+
+    <div class="email-card" id="email2" draggable="true" ondragstart="drag(event)">
+      <p><strong>Subject:</strong> Immediate Action Required: Account Suspended</p>
+      <p><strong>Sender:</strong> support@paypa1.com</p>
+      <p><strong>Content:</strong> Your account has been suspended. Click here to verify.</p>
+      <p><strong>Link:</strong> www.paypa1.com/login</p>
+    </div>
+
+    <div class="email-card" id="email4" draggable="true" ondragstart="drag(event)">
+      <p><strong>Subject:</strong> Update Your Banking Details</p>
+      <p><strong>Sender:</strong> support@secure-login.com</p>
+      <p><strong>Content:</strong> Click here to update your account details.</p>
+      <p><strong>Link:</strong> www.secure-login.com/update</p>
+    </div>
+
+    <div class="email-card" id="email5" draggable="true" ondragstart="drag(event)">
+      <p><strong>Subject:</strong> Your eBay Account Security Alert</p>
+      <p><strong>Sender:</strong> alerts@ebay.com</p>
+      <p><strong>Content:</strong> We noticed suspicious activity on your account. Click here to secure it.</p>
+      <p><strong>Link:</strong> www.ebay.com/security</p>
+    </div>
+
+    <div class="email-card" id="email6" draggable="true" ondragstart="drag(event)">
+      <p><strong>Subject:</strong> Unpaid Invoice Notification</p>
+      <p><strong>Sender:</strong> support@paymentupdate.com</p>
+      <p><strong>Content:</strong> You have an outstanding invoice of $500. Click here to pay.</p>
+      <p><strong>Link:</strong> www.paymentupdate.com/invoice</p>
+    </div>
+  </div>
+
+  <script src="phish.js"></script>
+</body>
+</html>
