@@ -1,0 +1,9 @@
+{
+    "name": "static-web-app",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "echo 'No build step needed for static HTML/CSS/JS'"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+  }
