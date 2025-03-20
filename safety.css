@@ -3,84 +3,139 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border-radius: 25px;
-}
- 
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 10px; 
 }
 
 /* Body Styling */
 body {
-  font-family: Tahoma;
-  background-color: rgb(245,249,242); /* Light Sage Green */
+  font-family: "Raleway", sans-serif; /* Font change */
+  background-color: rgb(245, 249, 242); /* Light Sage Green */
   text-align: center;
   padding: 20px;
 }
 
-a:link {
- color: Black;
- text-decoration: none;
- font-size: 30px;
+/* Header Styling */
+header {
+  background-color: #2a5dab; /* Dark Blue */
+  color: white;
+  padding: 10px 40px; /* Ensure padding matches other pages */
+  width: 100%; /* Ensure it spans the full width of the page */
+  position: fixed; /* Keep the header fixed at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Make sure it's above other content */
 }
 
-a:visited {
-  color: Black;
-  text-decoration: none;
-}
- 
-a:hover {
-  color: #A1A2DA;
-}
- 
-.container{
+.nav-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
- 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0; /* Adjust padding for consistent sizing */
 }
 
-h2{
-  text-align: center;
-  font-size: 65px;
+h1 {
+  font-size: 28px;
 }
 
-.tips li{
-color: black;
-text-align: left; 
-display: inline-flex;
-padding: 14px 20px;
-font-size: 18px;
-}
-
-.tips-container {
-display: flex;
-flex-wrap: wrap;
-gap: 25px 0px;
-padding: 20px;
-max-width: 1500px;
-margin: 0 auto;
-}
-
-.tips {
-background-color: rgb(220, 225, 216);
-width: 1500px;
-height: 300px;
-display: flex;
-flex-direction: row;
-align-items: center;
-border-radius: 25px;
-padding: 20px;
-font-size: 18px;
+/* Navbar Styling */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
 }
 
 nav li {
-  color: black;
-  text-align: center; 
-  display: inline-flex;
-  padding: 14px 20px;
+  display: inline;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Tips Section */
+h2 {
+  text-align: center;
+  font-size: 65px;
+  margin-top: 80px; /* Add margin to push content below the fixed header */
+}
+
+/* Styling for tips */
+.tips-container {
+  display: flex;
+  flex-direction: column; /* Stack the tips vertically */
+  gap: 25px 0px; /* Space between tips */
+  padding: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.tips {
+  background-color: rgb(220, 225, 216);
+  width: 100%; /* Full width for each tip */
+  height: auto; /* Adjust height to accommodate more content */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center;
+  border-radius: 25px;
+  padding: 30px 20px; /* Increase padding for more space around text */
   font-size: 18px;
+  text-align: center;
+  justify-content: center; /* Center content vertically */
+}
+
+.tips li {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  padding: 14px 20px;
+  text-align: center; /* Center the content inside */
+}
+
+.tips li b {
+  display: block;
+  font-size: 22px; /* Increase font size for the bold text */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tips-container {
+    gap: 20px;
+  }
+
+  .tips {
+    width: 100%; /* Full width on smaller screens */
+    padding: 15px 10px; /* Adjust padding for smaller screens */
+  }
+
+  h2 {
+    font-size: 48px; /* Smaller heading for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .tips-container {
+    gap: 15px;
+  }
+
+  .tips {
+    width: 100%; /* Full width on very small screens */
+    padding: 10px; /* Reduce padding */
+  }
+
+  h2 {
+    font-size: 36px; /* Even smaller heading */
+  }
 }

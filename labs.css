@@ -1,67 +1,70 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border-radius: 25px;
-  }
-   
-  header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px; 
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /* Body Styling */
-  body {
-    font-family: Tahoma;
-    background-color: rgb(245,249,242); /* Light Sage Green */
-    text-align: center;
-    padding: 20px;
-  }
-  
-  a:link {
-   color: Black;
-   text-decoration: none;
-   font-size: 30px;
-  }
-  
-  a:visited {
-    color: Black;
-    text-decoration: none;
-  }
-   
-  a:hover {
-    color: #A1A2DA;
-  }
-   
-  .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-  }
+/* Body Styling */
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: rgb(245, 249, 242); /* Light Sage Green */
+  text-align: center;
+}
 
-  h2{
-    text-align: center;
-    font-size: 65px;
-  }
+/* Header and Nav Container */
+header {
+  background-color: #2a5dab; /* Dark Blue */
+  color: white;
+  padding: 20px 40px;
+}
 
-.module li{
-  color: black;
-  text-align: center; 
-  display: inline-flex;
- 
-  padding: 14px 20px;
-  font-size: 18px;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+/* Navbar Styling */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Modules Section Styling */
+h2 {
+  font-size: 65px;
+  text-align: center;
+  margin-top: 60px; /* Space between navbar and modules */
 }
 
 .module-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 80px 250px;
+  gap: 80px 250px; /* Horizontal and vertical spacing */
   padding: 20px;
   max-width: 1500px;
   margin: 0 auto;
@@ -79,20 +82,57 @@
   text-align: center;
   padding: 20px;
   font-size: 18px;
+  position: relative; /* Ensures the link inside covers the entire module */
 }
 
-  nav li {
-    color: black;
-    text-align: center; 
-    display: inline-flex;
-   
-    padding: 14px 20px;
-    font-size: 18px;
+.module a {
+  position: absolute; /* Make the link cover the entire button */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none; /* Remove underline from the link */
+}
+
+.module p {
+  font-size: 18px;
+  color: black;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.module a:hover p {
+  color: #a1a2da; /* Light up font on hover */
+  transform: scale(1.1); /* Slightly increase the size on hover */
+}
+
+.module-icon {
+  font-size: 50px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .module-container {
+    gap: 20px;
   }
 
-  .module-icon {
-    font-size: 50px;
-    color: black;
-    margin-bottom: 10px;
+  .module {
+    width: 45%;
+  }
 }
 
+@media (max-width: 480px) {
+  .module-container {
+    gap: 10px;
+  }
+
+  .module {
+    width: 100%; /* Stack modules vertically */
+  }
+}
