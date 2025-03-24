@@ -53,12 +53,32 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Modules Section */
+/* Lesson description styling */
+.lesson-description {
+  background-color: #f3f4f6; /* Light background for the description */
+  color: #333; /* Darker text for better contrast */
+  padding: 20px 40px; /* Padding around the text */
+  margin: 0 auto 40px; /* Center it and add space below */
+  max-width: 800px; /* Max width for readability */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* A comfortable font size */
+  line-height: 1.6; /* Improved line height for readability */
+  text-align: left; /* Align text to the left */
+}
+
+.lesson-description p {
+  margin-bottom: 15px; /* Spacing between the lines */
+}
+
+/* Styling the main lessons section */
 h2 {
   font-size: 65px;
   text-align: center;
   margin-top: 60px; /* Added margin-top for space from the navbar */
+  color: #2a5dab; /* Color to match the theme */
+  font-weight: bold;
 }
+
 
 .module-container {
   display: flex;
