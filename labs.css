@@ -16,26 +16,27 @@ body {
 header {
   background-color: #2a5dab; /* Dark Blue */
   color: white;
-  padding: 20px 40px;
+  padding: 20px 0; /* Adjusted padding to reduce space around navbar */
 }
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Space between h1 and ul */
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%; /* Full width for larger screens */
+  padding: 0 20px; /* Reduced padding for closer alignment */
 }
 
 h1 {
   font-size: 28px;
+  margin: 0; /* Remove any default margin */
 }
 
 /* Navbar Styling */
 nav ul {
   list-style-type: none;
   display: flex;
-  gap: 20px;
+  gap: 20px; /* Consistent gap between nav items */
 }
 
 nav li {
@@ -58,8 +59,10 @@ h2 {
   font-size: 65px;
   text-align: center;
   margin-top: 60px; /* Space between navbar and modules */
+  color: #2a5dab; /* Consistent blue to match theme */
 }
 
+/* Module Container */
 .module-container {
   display: flex;
   flex-wrap: wrap;
@@ -85,8 +88,9 @@ h2 {
   position: relative; /* Ensures the link inside covers the entire module */
 }
 
+/* Make link cover the entire module */
 .module a {
-  position: absolute; /* Make the link cover the entire button */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -96,18 +100,19 @@ h2 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  text-decoration: none; /* Remove underline from the link */
+  text-decoration: none;
 }
 
 .module p {
   font-size: 18px;
   color: black;
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
+/* Hover effect */
 .module a:hover p {
   color: #a1a2da; /* Light up font on hover */
-  transform: scale(1.1); /* Slightly increase the size on hover */
+  transform: scale(1.1);
 }
 
 .module-icon {
@@ -118,6 +123,21 @@ h2 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center navbar contents */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack links vertically */
+    align-items: center;
+    gap: 10px;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
   .module-container {
     gap: 20px;
   }
@@ -127,7 +147,20 @@ h2 {
   }
 }
 
+/* Mobile Design */
 @media (max-width: 480px) {
+  .nav-container {
+    padding: 10px 20px; /* Less padding on small screens */
+  }
+
+  h1 {
+    font-size: 24px; /* Slightly smaller logo text */
+  }
+
+  nav a {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
   .module-container {
     gap: 10px;
   }

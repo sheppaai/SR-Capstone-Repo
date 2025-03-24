@@ -7,42 +7,38 @@
 
 /* Body Styling */
 body {
-  font-family: "Raleway", sans-serif; /* Font change */
+  font-family: "Raleway", sans-serif;
   background-color: rgb(245, 249, 242); /* Light Sage Green */
   text-align: center;
-  padding: 20px;
 }
 
-/* Header Styling */
+/* Header and Nav Container */
 header {
   background-color: #2a5dab; /* Dark Blue */
   color: white;
-  padding: 10px 40px; /* Ensure padding matches other pages */
-  width: 100%; /* Ensure it spans the full width of the page */
-  position: fixed; /* Keep the header fixed at the top */
-  top: 0;
-  left: 0;
-  z-index: 1000; /* Make sure it's above other content */
+  padding: 20px 0; /* Adjusted padding to reduce space around navbar */
 }
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Space between h1 and ul */
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 0; /* Adjust padding for consistent sizing */
+  max-width: 1200px; /* Same max-width as other pages */
+  margin: 0 auto; /* Center the navbar */
+  padding: 0 20px; /* Reduced padding for closer alignment */
 }
 
+/* Logo Styling */
 h1 {
   font-size: 28px;
+  margin: 0; /* Remove any default margin */
 }
 
 /* Navbar Styling */
 nav ul {
   list-style-type: none;
   display: flex;
-  gap: 20px;
+  gap: 20px; /* Consistent gap between nav items */
 }
 
 nav li {
@@ -62,35 +58,38 @@ nav a:hover {
 
 /* Tips Section */
 h2 {
-  text-align: center;
   font-size: 65px;
-  margin-top: 80px; /* Add margin to push content below the fixed header */
+  text-align: center;
+  margin-top: 60px; /* Space between navbar and modules */
+  color: #2a5dab; /* Consistent blue to match theme */
 }
 
-/* Styling for tips */
+/* Tips Container */
 .tips-container {
   display: flex;
-  flex-direction: column; /* Stack the tips vertically */
-  gap: 25px 0px; /* Space between tips */
-  padding: 20px;
-  max-width: 1500px;
+  flex-direction: column; /* Stack tips vertically */
+  gap: 25px;
+  padding: 40px 20px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Individual Tip Box */
 .tips {
   background-color: rgb(220, 225, 216);
-  width: 100%; /* Full width for each tip */
-  height: auto; /* Adjust height to accommodate more content */
+  width: 100%;
+  height: auto;
   display: flex;
-  flex-direction: column; /* Stack content vertically */
+  flex-direction: column;
   align-items: center;
   border-radius: 25px;
-  padding: 30px 20px; /* Increase padding for more space around text */
+  padding: 30px 20px;
   font-size: 18px;
   text-align: center;
-  justify-content: center; /* Center content vertically */
+  justify-content: center;
 }
 
+/* Tip Content */
 .tips li {
   color: black;
   display: flex;
@@ -99,43 +98,76 @@ h2 {
   justify-content: center;
   font-size: 18px;
   padding: 14px 20px;
-  text-align: center; /* Center the content inside */
+  text-align: center;
 }
 
 .tips li b {
   display: block;
-  font-size: 22px; /* Increase font size for the bold text */
+  font-size: 22px;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
 /* Responsive Design */
+
+/* For tablets and medium screens */
 @media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px; /* Reduce padding for smaller screens */
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 48px;
+    margin-top: 40px;
+  }
+
   .tips-container {
     gap: 20px;
   }
 
   .tips {
-    width: 100%; /* Full width on smaller screens */
-    padding: 15px 10px; /* Adjust padding for smaller screens */
-  }
-
-  h2 {
-    font-size: 48px; /* Smaller heading for smaller screens */
+    width: 100%;
+    padding: 20px;
   }
 }
 
+/* For mobile devices */
 @media (max-width: 480px) {
+  .nav-container {
+    padding: 10px 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+
   .tips-container {
     gap: 15px;
   }
 
   .tips {
-    width: 100%; /* Full width on very small screens */
-    padding: 10px; /* Reduce padding */
-  }
-
-  h2 {
-    font-size: 36px; /* Even smaller heading */
+    width: 100%;
+    padding: 15px;
   }
 }

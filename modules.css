@@ -16,19 +16,20 @@ body {
 header {
   background-color: #2a5dab; /* Dark Blue */
   color: white;
-  padding: 20px 40px;
+  padding: 20px 0; /* Adjusted padding for a tighter navbar */
 }
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Space between h1 and ul */
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%; /* Full width of the screen */
+  padding: 0 20px; /* Reduced padding to bring contents closer to the sides */
 }
 
 h1 {
   font-size: 28px;
+  margin: 0; /* Remove any default margin */
 }
 
 /* Navbar Styling */
@@ -78,7 +79,6 @@ h2 {
   color: #2a5dab; /* Color to match the theme */
   font-weight: bold;
 }
-
 
 .module-container {
   display: flex;
@@ -138,6 +138,21 @@ h2 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column; /* Stack the h1 and ul vertically */
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column; /* Stack the menu items vertically */
+    align-items: center; /* Center the items */
+  }
+
+  nav li {
+    margin: 10px 0; /* Add space between menu items */
+  }
+
   .module-container {
     gap: 20px;
   }
@@ -145,14 +160,36 @@ h2 {
   .module {
     width: 45%;
   }
+
+  .lesson-description {
+    padding: 20px 30px;
+    max-width: 100%; /* Allow full width for smaller screens */
+  }
 }
 
 @media (max-width: 480px) {
+  .nav-container {
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+  }
+
+  h1 {
+    font-size: 24px; /* Slightly smaller font size for h1 on smaller screens */
+  }
+
+  nav a {
+    font-size: 14px; /* Smaller font size for menu items */
+  }
+
   .module-container {
     gap: 10px;
   }
 
   .module {
     width: 100%; /* Stack modules vertically */
+  }
+
+  .lesson-description {
+    padding: 20px 10px;
+    max-width: 100%; /* Full width */
   }
 }
