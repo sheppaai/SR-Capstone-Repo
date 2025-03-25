@@ -78,4 +78,14 @@ body {
   #new-scenario-btn:hover {
     background-color: #0056b3; /* Darker blue on hover */
   }
-  
+ 
+  #Exit {
+    background-color: rgb(227, 227, 227);
+    border-color: rgb(170, 172, 169);
+    border-style: groove;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }

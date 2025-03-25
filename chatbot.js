@@ -4,6 +4,7 @@ const chatbox = document.getElementById('chatbox');
 const userInput = document.getElementById('user-input');
 const newScenarioBtn = document.getElementById('new-scenario-btn');
 
+// Function to display messages
 function displayMessage(message, sender = 'bot') {
   const messageElement = document.createElement('div');
   messageElement.textContent = `${sender}: ${message}`;
@@ -11,123 +12,81 @@ function displayMessage(message, sender = 'bot') {
   chatbox.scrollTop = chatbox.scrollHeight; // Keep chat scrolled to the bottom
 }
 
-function submitResponse() {
+// Function to submit user response and get a reply from the AI
+async function submitResponse() {
   const userMessage = userInput.value.trim();
   if (userMessage === "") return;
 
   // Display user message
   displayMessage(userMessage, 'user');
 
-  // Process the response based on current scenario
+  // Call AI API to get a response based on the user input
+  const aiReply = await getAIResponse(userMessage);
+
+  // Display AI response
+  displayMessage(aiReply, 'bot');
+
+  // Move to the next scenario based on the AI's message
   switch (currentScenario) {
-    case 0:
-      handleGreeting(userMessage);
-      break;
     case 1:
-      handleEmailScamScenario(userMessage);
+      currentScenario = 2; // Move to next scenario after the first one
       break;
     case 2:
-      handleFacebookStrangerScenario(userMessage);
+      currentScenario = 3; // Move to next scenario after the second one
       break;
     case 3:
-      handleLegitBankEmailScenario(userMessage);
+      currentScenario = 0; // End of scenarios
       break;
     default:
-      displayMessage("I'm sorry, I didn't understand that.", 'bot');
+      currentScenario = 0; // Default to end if something goes wrong
+      break;
   }
 
   userInput.value = ""; // Clear the input box
 }
 
-// Function for the greeting scenario (initial ask to try scenarios)
-function handleGreeting(userMessage) {
-  if (userMessage.toLowerCase() === 'yes') {
-    displayMessage("Great! Let's start with the first scenario.", 'bot');
-    currentScenario = 1; // Start Scenario #1
-    startEmailScamScenario(); // Begin Scenario 1
-  } else if (userMessage.toLowerCase() === 'no') {
-    displayMessage("If you do not want to try out a scenario, please exit the screen.", 'bot');
-    currentScenario = 0; // Stay in greeting loop
-  } else {
-    displayMessage("Please type 'yes' to start a scenario or 'no' to exit.", 'bot');
-  }
-}
-
-// Scenario 1: Suspicious Email (Scam)
-async function handleEmailScamScenario(userMessage) {
-  if (userMessage.toLowerCase().includes("delete")) {
-    displayMessage("Good choice! Deleting the email is often the safest option when you're unsure.", 'bot');
-    currentScenario = 2; // Move to next scenario
-  } else if (userMessage.toLowerCase().includes("ignore")) {
-    displayMessage("Ignoring the email might be an option, but deleting it is safer.", 'bot');
-    currentScenario = 2; // Move to next scenario
-  } else if (userMessage.toLowerCase().includes("pay") || userMessage.toLowerCase().includes("click")) {
-    displayMessage("Not a good idea! Scammers try to trick you into paying or clicking malicious links.", 'bot');
-    currentScenario = 2; // Move to next scenario
-  } else {
-    displayMessage("Please choose one of the following: 'delete', 'ignore', or 'click link'.", 'bot');
-  }
-}
-
-// Scenario 2: Stranger Messaging on Facebook
-async function handleFacebookStrangerScenario(userMessage) {
-  if (userMessage.toLowerCase().includes("block")) {
-    displayMessage("Excellent! Blocking the stranger is a safe option. You can also report them if needed.", 'bot');
-    currentScenario = 3; // Move to next scenario
-  } else if (userMessage.toLowerCase().includes("ignore")) {
-    displayMessage("Ignoring the message is an option, but blocking the stranger prevents further contact.", 'bot');
-    currentScenario = 3; // Move to next scenario
-  } else if (userMessage.toLowerCase().includes("respond")) {
-    displayMessage("Responding to a stranger online can be risky, especially if they ask personal questions.", 'bot');
-    currentScenario = 3; // Move to next scenario
-  } else {
-    displayMessage("Please choose one of the following: 'block', 'ignore', or 'respond'.", 'bot');
-  }
-}
-
-// Scenario 3: Legit Email from the Bank
-async function handleLegitBankEmailScenario(userMessage) {
-  if (userMessage.toLowerCase().includes("confirm")) {
-    displayMessage("That's correct! If you made the purchase, confirm it with your bank. Never share your password or pin.", 'bot');
-    currentScenario = 0; // End of scenarios
-  } else if (userMessage.toLowerCase().includes("ignore")) {
-    displayMessage("Ignoring the email could lead to missed opportunities. If it's a legitimate email, you should confirm the transaction.", 'bot');
-    currentScenario = 0; // End of scenarios
-  } else {
-    displayMessage("Please choose one of the following: 'confirm' or 'ignore'.", 'bot');
-  }
-}
-
-// AI API Call function (OpenAI GPT-3 example)
+// AI API Call function to get the AI's response based on user input
 async function getAIResponse(userMessage) {
-  const apiKey = "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"; // Insert your OpenAI API key here
+  const apiKey = "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"; // Replace with your actual OpenAI API key
   const apiUrl = 'https://api.openai.com/v1/chat/completions';
 
-  const prompt = `User: ${userMessage}\nBot:`;
+  const prompt = `User: ${userMessage}\nBot:`;  // Prompt the bot with user's message
 
   try {
     const response = await fetch(apiUrl, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${apiKey}`,
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'gpt-3.5-turbo',
+        model: 'gpt-3.5-turbo', // or whichever model you're using
         messages: [{ role: 'user', content: prompt }],
-        max_tokens: 100
-      })
+        max_tokens: 100,
+      }),
     });
 
+    // Check if the response is okay (status 200)
+    if (!response.ok) {
+      throw new Error(`API Error: ${response.status} - ${response.statusText}`);
+    }
+
     const data = await response.json();
-    const botReply = data.choices[0].message.content;
-    return botReply;
+
+    // Check if there is a valid response from OpenAI
+    if (data.choices && data.choices.length > 0) {
+      const botReply = data.choices[0].message.content;
+      return botReply;  // Return the AI's response
+    } else {
+      throw new Error('No choices received from API');
+    }
   } catch (error) {
-    return "Sorry, something went wrong with the AI. Try again later.";
+    console.error('Error fetching AI response:', error);
+    return `Sorry, something went wrong with the AI: ${error.message}`;  // Handle errors
   }
 }
 
-// Function to reset and start new scenario when button is pressed
+// Function to reset and start a new scenario when button is pressed
 newScenarioBtn.addEventListener('click', () => {
   currentScenario = (currentScenario % 3) + 1; // Move to the next scenario, looping back to 1 after 3
   chatbox.innerHTML = '';
@@ -146,7 +105,7 @@ newScenarioBtn.addEventListener('click', () => {
 });
 
 // Start the greeting scenario immediately
-window.onload = function() {
+window.onload = function () {
   startGreetingScenario();
 };
 
