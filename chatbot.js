@@ -47,7 +47,7 @@ async function submitResponse() {
 
 // AI API Call function to get the AI's response based on user input
 async function getAIResponse(userMessage) {
-  const apiKey = "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"; // Replace with your actual OpenAI API key
+  const apiKey = "apikey"; // Replace with your actual OpenAI API key
   const apiUrl = 'https://api.openai.com/v1/chat/completions';
 
   const prompt = `User: ${userMessage}\nBot:`;  // Prompt the bot with user's message
