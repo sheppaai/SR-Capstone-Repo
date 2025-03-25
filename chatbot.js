@@ -45,46 +45,9 @@ async function submitResponse() {
   userInput.value = ""; // Clear the input box
 }
 
-// AI API Call function to get the AI's response based on user input
-async function getAIResponse(userMessage) {
-  const apiKey = "apikey"; // Replace with your actual OpenAI API key
-  const apiUrl = 'https://api.openai.com/v1/chat/completions';
 
-  const prompt = `User: ${userMessage}\nBot:`;  // Prompt the bot with user's message
 
-  try {
-    const response = await fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'gpt-3.5-turbo', // or whichever model you're using
-        messages: [{ role: 'user', content: prompt }],
-        max_tokens: 100,
-      }),
-    });
 
-    // Check if the response is okay (status 200)
-    if (!response.ok) {
-      throw new Error(`API Error: ${response.status} - ${response.statusText}`);
-    }
-
-    const data = await response.json();
-
-    // Check if there is a valid response from OpenAI
-    if (data.choices && data.choices.length > 0) {
-      const botReply = data.choices[0].message.content;
-      return botReply;  // Return the AI's response
-    } else {
-      throw new Error('No choices received from API');
-    }
-  } catch (error) {
-    console.error('Error fetching AI response:', error);
-    return `Sorry, something went wrong with the AI: ${error.message}`;  // Handle errors
-  }
-}
 
 // Function to reset and start a new scenario when button is pressed
 newScenarioBtn.addEventListener('click', () => {
