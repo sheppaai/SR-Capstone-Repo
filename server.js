@@ -31,17 +31,13 @@ app.post("/chat", async (req, res) => {
         });
 
         const data = await response.json();
-
-        // Debugging: Log the entire response
-        console.log("OpenAI Response:", data);
+        console.log("OpenAI Response:", data);  // Debugging
 
         if (data.choices && data.choices[0] && data.choices[0].message) {
             const reply = data.choices[0].message.content;
-            console.log("Bot Reply:", reply);  // Log the bot's reply
-            res.json({ reply });
+            res.json({ reply });  // Send the response back to frontend
         } else {
-            // If the expected structure is not found
-            console.error("Error: Response structure is not as expected", data);
+            console.error("Error: Response structure is not as expected");
             res.status(500).json({ error: "Unexpected API response structure" });
         }
 
