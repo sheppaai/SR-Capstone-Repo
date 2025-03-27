@@ -23,7 +23,7 @@ def serve_static_files(filename):
 def get_openai_response(prompt):
     try:
         # Use openai.ChatCompletion.create to get the chat response
-        response = openai.ChatCompletion.create(
+        response = openai.chat.completions.create(
             model="gpt-3.5-turbo",  # Specify the model
             messages=[  # Define the system and user context
                 {"role": "system", "content": "You are a helpful chatbot."},
