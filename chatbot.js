@@ -22,16 +22,11 @@ async function sendMessageToBackend(message) {
         });
 
         const data = await response.json();
-
-        // Log the response from the backend
-        console.log("Backend response:", data);
-
         if (data.reply) {
             displayMessage(data.reply, "bot");
         } else {
             displayMessage("Error: No reply from the bot.", "bot");
         }
-
     } catch (error) {
         console.error("Error:", error);
         displayMessage("Oops! Something went wrong. Try again later.", "bot");
