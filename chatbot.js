@@ -15,10 +15,16 @@ function displayMessage(message, sender = "bot") {
 // Function to send user input to the backend (which will use the API key)
 async function sendMessageToBackend(message) {
     try {
+        // Include the current scenario in the request
+        const scenarioContext = getScenarioContext();  // Get the current scenario's context
+
         const response = await fetch("http://localhost:5000/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ message: message }),
+            body: JSON.stringify({
+                message: message,
+                scenario: scenarioContext  // Send scenario info to the backend
+            }),
         });
 
         const data = await response.json();
@@ -33,58 +39,65 @@ async function sendMessageToBackend(message) {
     }
 }
 
-
-// Handle user input submission
+// Function to handle user input submission
 function submitResponse() {
     const userMessage = userInput.value.trim();
-    if (userMessage === "") return;
+    if (userMessage === "") return; // Prevent submitting empty messages
 
     displayMessage(userMessage, "user");
     sendMessageToBackend(userMessage);
-    userInput.value = "";
+    userInput.value = ""; // Clear the input box
 }
 
-// Start new scenarios
+// Start new scenarios when the button is clicked
 newScenarioBtn.addEventListener("click", () => {
-    currentScenario = (currentScenario % 3) + 1;
-    chatbox.innerHTML = "";
-    chatHistory = [];
+    currentScenario = (currentScenario % 3) + 1;  // Cycle through scenarios
+    chatbox.innerHTML = "";  // Clear the chatbox
+    chatHistory = [];  // Reset the chat history
 
-    switch (currentScenario) {
-        case 1:
-            startEmailScamScenario();
-            break;
-        case 2:
-            startFacebookStrangerScenario();
-            break;
-        case 3:
-            startLegitBankEmailScenario();
-            break;
-    }
+    // Start the selected scenario
+    startScenario();
 });
 
-// Start Greeting Scenario
+// Function to display the selected scenario
+function startScenario() {
+    switch (currentScenario) {
+        case 1:
+            displayMessage("Scenario 1: You received an email claiming your account will be shut down unless you pay a fine.", "bot");
+            displayMessage("What will you do?", "bot");
+            break;
+        case 2:
+            displayMessage("Scenario 2: A stranger messages you on Facebook asking personal questions.", "bot");
+            displayMessage("What will you do?", "bot");
+            break;
+        case 3:
+            displayMessage("Scenario 3: You received a legit email from your bank asking if you were trying to buy something for $100.", "bot");
+            displayMessage("What will you do?", "bot");
+            break;
+        default:
+            displayMessage("Welcome to the NetWise Chatbot!", "bot");
+            displayMessage("Click New Scenario to get started!", "bot")
+            break;
+    }
+}
+
+// Scenario functions are being replaced by the above switch-case in startScenario
+
+// Start Greeting Scenario on page load
 window.onload = function () {
-    startGreetingScenario();
+    startScenario();  // Display initial greeting or first scenario
 };
 
-// Scenario functions
-function startGreetingScenario() {
-    displayMessage("Welcome to the NetWise Chatbot!", "bot");
-    displayMessage("Click 'New Scenario' to test your online safety skills.", "bot");
-}
-
-function startEmailScamScenario() {
-    displayMessage("Scenario 1: You received an email claiming your account will be shut down unless you pay a fine.", "bot");
-    displayMessage("What will you do?", "bot");
-}
-
-function startFacebookStrangerScenario() {
-    displayMessage("Scenario 2: A stranger messages you on Facebook asking personal questions.", "bot");
-    displayMessage("What will you do?", "bot");
-}
-
-function startLegitBankEmailScenario() {
-    displayMessage("Scenario 3: You received a legit email from your bank asking if you were trying to buy something for $100.", "bot");
-    displayMessage("What will you do?", "bot");
+// Function to get the scenario context based on currentScenario
+function getScenarioContext() {
+    switch (currentScenario) {
+        case 1:
+            return "You received an email claiming your account will be shut down unless you pay a fine.";
+        case 2:
+            return "A stranger messages you on Facebook asking personal questions.";
+        case 3:
+            return "You received a legit email from your bank asking if you were trying to buy something for $100.";
+        default:
+            return "General conversation.";  // Fallback if no scenario is set
+    }
 }
