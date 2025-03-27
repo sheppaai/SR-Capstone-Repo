@@ -32,8 +32,8 @@ def get_openai_response(prompt):
             max_tokens=150,
             temperature=0.7,
         )
-        # Correctly extract the content from the response
-        return response['choices'][0]['message']['content'].strip()
+        # ✅ Corrected way to extract the response content
+        return response.choices[0].message.content.strip()
     except Exception as e:
         return str(e)
 
