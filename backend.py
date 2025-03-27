@@ -1,10 +1,21 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
+import os
 import openai
 from key import OPENAI_API_KEY  # Import API key from key.py
 
 app = Flask(__name__)
 
 openai.api_key = OPENAI_API_KEY  # Set OpenAI API key
+
+# Serve chatbot.html from the root directory
+@app.route('/')
+def index():
+    return send_from_directory(os.getcwd(), 'chatbot.html')
+
+# Serve other static files (CSS, JS, images) from the root directory
+@app.route('/<path:filename>')
+def serve_static(filename):
+    return send_from_directory(os.getcwd(), filename)
 
 def get_openai_response(prompt):
     try:
@@ -20,7 +31,7 @@ def get_openai_response(prompt):
     except Exception as e:
         return str(e)
 
-@app.route('/chat', methods=['POST'])  # Change method to POST for better handling of data
+@app.route('/chat', methods=['POST'])  # Change to POST method
 def chat():
     user_message = request.json.get('message')  # Get message from JSON payload
 
