@@ -41,11 +41,9 @@ def get_openai_response(prompt):
 @app.route('/chat', methods=['POST'])
 def chat():
     user_message = request.json.get('message')  # Get message from JSON payload
-
     if user_message:
         response = get_openai_response(user_message)
         return jsonify({'reply': response})
-    
     return jsonify({'reply': 'Error: No message received.'})
 
 if __name__ == '__main__':
