@@ -15,10 +15,10 @@ function displayMessage(message, sender = "bot") {
 // Function to send user input to the backend (which will use the API key)
 async function sendMessageToBackend(message) {
     try {
-        const response = await fetch(`http://localhost:5000/chat?message=${encodeURIComponent(message)}`, {
-            method: "POST",  // Changed to POST
+        const response = await fetch("http://localhost:5000/chat", {
+            method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ message: message })  // Send the message in the body
+            body: JSON.stringify({ message: message }),
         });
 
         const data = await response.json();
