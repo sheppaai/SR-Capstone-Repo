@@ -12,7 +12,7 @@ function displayMessage(message, sender = "bot") {
     chatbox.scrollTop = chatbox.scrollHeight;
 }
 
-// Function to send user input to the backend (instead of directly to OpenAI)
+// Function to send user input to the backend (instead of directly to OpenAI) test
 async function sendMessageToBackend(message) {
     try {
         const response = await fetch("http://localhost:5000/chat", {
