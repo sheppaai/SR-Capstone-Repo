@@ -23,7 +23,8 @@ header {
   display: flex;
   justify-content: space-between; /* Space between h1 and ul */
   align-items: center;
-  max-width: 1200px; /* Same max-width as other pages */
+  max-width: none;
+  width: 100%;
   margin: 0 auto; /* Center the navbar */
   padding: 0 20px; /* Reduced padding for closer alignment */
 }
