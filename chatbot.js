@@ -15,15 +15,26 @@ function displayMessage(message, sender = "bot") {
 // Function to send user input to the backend (instead of directly to OpenAI) test
 async function sendMessageToBackend(message) {
     try {
-        const response = await fetch("http://localhost:5000/chat", {
+        const response = await fetch("https://api.openai.com/v1/chat/completions", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ message }),
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer YOUR_OPENAI_API_KEY`, // Replace with your OpenAI API key
+            },
+            body: JSON.stringify({
+                model: "gpt-4", // You can change this to "gpt-3.5-turbo" or another model
+                messages: [
+                    { role: "system", content: "You are a helpful assistant." }, // Optional system message for context
+                    { role: "user", content: message }
+                ]
+            }),
         });
 
         const data = await response.json();
-        if (data.reply) {
-            displayMessage(data.reply, "bot");
+
+        // Check if the response is valid
+        if (data.choices && data.choices[0] && data.choices[0].message) {
+            displayMessage(data.choices[0].message.content, "bot");
         } else {
             displayMessage("Error: No reply from the bot.", "bot");
         }
