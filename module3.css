@@ -14,37 +14,37 @@ header {
 
 /* Body Styling */
 body {
-  font-family: Tahoma;
-  background-color: rgb(245,249,242); /* Light Sage Green */
+  font-family: Raleway;
+  background-color: rgb(245, 249, 242); /* Light Sage Green */
   text-align: center;
   padding: 20px;
 }
- 
-.container1{
-  width:1500px;
-  height:650px;
-  background-color: rgb(220,225,216);
+
+.container1 {
+  width: 1500px;
+  height: 650px;
+  background-color: rgb(245, 249, 242);
   display: flex;
   flex-wrap: wrap;
   gap: 25px 0px;
   margin: 0 auto;
   text-align: center;
   margin-top: 100px;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
 }
 
-.box1{ 
-  width:1500px;
+.box1 {
+  width: 1500px;
   text-align: center;
   padding: 100px;
   font-size: 25px;
 }
 
-.container2{
-  width:1500px;
-  height:650px;
-  background-color: rgb(220,225,216);
+.container2 {
+  width: 1500px;
+  height: 650px;
+  background-color: rgb(220, 225, 216);
   display: flex;
   flex-wrap: wrap;
   gap: 25px 0px;
@@ -54,17 +54,17 @@ body {
   justify-content: center;
 }
 
-.box2{ 
-  width:1500px;
+.box2 {
+  width: 1500px;
   text-align: center;
   padding: 100px;
   font-size: 25px;
 }
 
-.container3{
-  width:1500px;
-  height:650px;
-  background-color: rgb(220,225,216);
+.container3 {
+  width: 1500px;
+  height: 650px;
+  background-color: rgb(220, 225, 216);
   display: flex;
   flex-wrap: wrap;
   gap: 25px 0px;
@@ -74,17 +74,17 @@ body {
   justify-content: center;
 }
 
-.box3{ 
-  width:1500px;
+.box3 {
+  width: 1500px;
   text-align: center;
   padding: 100px;
   font-size: 25px;
 }
 
-.container4{
-  width:1500px;
-  height:650px;
-  background-color: rgb(220,225,216);
+.container4 {
+  width: 1500px;
+  height: 650px;
+  background-color: rgb(220, 225, 216);
   display: flex;
   flex-wrap: wrap;
   gap: 25px 0px;
@@ -94,17 +94,17 @@ body {
   justify-content: center;
 }
 
-.box4{ 
-  width:1500px;
+.box4 {
+  width: 1500px;
   text-align: center;
   padding: 100px;
   font-size: 25px;
 }
 
-.container5{
-  width:1500px;
+.container5 {
+  width: 1500px;
   height: 2000px;
-  background-color: rgb(220,225,216);
+  background-color: rgb(220, 225, 216);
   display: flex;
   flex-wrap: wrap;
   gap: 25px 0px;
@@ -114,18 +114,18 @@ body {
   justify-content: center;
 }
 
-.box5{ 
-  width:1500px;
-  height:850px;
+.box5 {
+  width: 1500px;
+  height: 850px;
   text-align: center;
   padding: 100px;
   font-size: 25px;
 }
 
-.container6{
-  width:1500px;
-  height:650px;
-  background-color: rgb(220,225,216);
+.container6 {
+  width: 1500px;
+  height: 650px;
+  background-color: rgb(220, 225, 216);
   display: flex;
   flex-wrap: wrap;
   gap: 25px 0px;
@@ -135,17 +135,17 @@ body {
   justify-content: center;
 }
 
-.box6{ 
-  width:1500px;
+.box6 {
+  width: 1500px;
   text-align: center;
   padding: 100px;
   font-size: 25px;
 }
 
-.container7{
-  width:1500px;
-  height:650px;
-  background-color: rgb(220,225,216);
+.container7 {
+  width: 1500px;
+  height: 650px;
+  background-color: rgb(220, 225, 216);
   display: flex;
   flex-wrap: wrap;
   gap: 25px 0px;
@@ -155,17 +155,17 @@ body {
   justify-content: center;
 }
 
-.box7{ 
-  width:1500px;
+.box7 {
+  width: 1500px;
   text-align: center;
   padding: 100px;
   font-size: 25px;
 }
 
-.container8{
-  width:1500px;
-  height:650px;
-  background-color: rgb(220,225,216);
+.container8 {
+  width: 1500px;
+  height: 650px;
+  background-color: rgb(220, 225, 216);
   display: flex;
   flex-wrap: wrap;
   gap: 25px 0px;
@@ -175,17 +175,17 @@ body {
   justify-content: center;
 }
 
-.box8{ 
-  width:1500px;
+.box8 {
+  width: 1500px;
   text-align: center;
   padding: 100px;
   font-size: 25px;
 }
 
-.container9{
-  width:1500px;
-  height:650px;
-  background-color: rgb(220,225,216);
+.container9 {
+  width: 1500px;
+  height: 650px;
+  background-color: rgb(220, 225, 216);
   display: flex;
   flex-wrap: wrap;
   gap: 25px 0px;
@@ -195,17 +195,17 @@ body {
   justify-content: center;
 }
 
-.box9{ 
-  width:1500px;
+.box9 {
+  width: 1500px;
   text-align: center;
   padding: 100px;
   font-size: 25px;
 }
 
-.container10{
-  width:1500px;
-  height:650px;
-  background-color: rgb(220,225,216);
+.container10 {
+  width: 1500px;
+  height: 650px;
+  background-color: rgb(220, 225, 216);
   display: flex;
   flex-wrap: wrap;
   gap: 25px 0px;
@@ -215,17 +215,17 @@ body {
   justify-content: center;
 }
 
-.box10{ 
-  width:1500px;
+.box10 {
+  width: 1500px;
   text-align: center;
   padding: 100px;
   font-size: 25px;
 }
 
-.container11{
-  width:1500px;
-  height:650px;
-  background-color: rgb(220,225,216);
+.container11 {
+  width: 1500px;
+  height: 650px;
+  background-color: rgb(220, 225, 216);
   display: flex;
   flex-wrap: wrap;
   gap: 25px 0px;
@@ -235,17 +235,17 @@ body {
   justify-content: center;
 }
 
-.box11{ 
-  width:1500px;
+.box11 {
+  width: 1500px;
   text-align: center;
   padding: 100px;
   font-size: 25px;
 }
 
-.container12{
-  width:1500px;
-  height:650px;
-  background-color: rgb(220,225,216);
+.container12 {
+  width: 1500px;
+  height: 650px;
+  background-color: rgb(220, 225, 216);
   display: flex;
   flex-wrap: wrap;
   gap: 25px 0px;
@@ -255,28 +255,25 @@ body {
   justify-content: center;
 }
 
-.box12{ 
-  width:1500px;
+.box12 {
+  width: 1500px;
   text-align: center;
   padding: 100px;
   font-size: 25px;
 }
 
-
-
-
-
-h2{
+h2 {
   font-size: 60px;
 }
 
-b{
+b {
   font-size: 40px;
 }
 
 #Start {
-  background-color:rgb(227,227,227);
-  border-color: rgb(170,172,169);
+  font-family: Raleway;
+  color: white;
+  background-color: #2a5dab;
   border-style: groove;
   padding: 10px 20px;
   font-size: 16px;
@@ -285,39 +282,41 @@ b{
   margin-top: 10px;
 }
 
-#Start, button {
-  background-color: rgb(227, 227, 227);
-  border-color: rgb(170, 172, 169);
+#Start,
+button {
+  font-family: Raleway;
+  color: white;
+  background-color: #2a5dab;
   border-style: groove;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
-.Exit1{
+.Exit1 {
   float: right;
 }
 
 .nav-button.left {
-  float: left; 
+  float: left;
 }
 
 .nav-button.right {
   float: right;
 }
 
-h3{
+h3 {
   float: left;
 }
 
-.correct{
-width: 1000px;
-height: 50px;
+.correct {
+  width: 1000px;
+  height: 50px;
 }
 
-.wrong{
-width: 1000px;
-height: 50px;
+.wrong {
+  width: 1000px;
+  height: 50px;
 }

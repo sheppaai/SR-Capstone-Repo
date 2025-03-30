@@ -1,344 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Netwise</title>
-    <link rel="stylesheet" href="module2.css">
-</head>
+    <link rel="stylesheet" href="module2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<header>
+  <header>
     <h1>NetWise</h1>
-</header>
+  </header>
 
-<body>
+  <body>
     <div class="slideshow" id="welcomePage">
-        <div class="container1">
-            <div class="box1">
-                <br><br>
-                <h2>Best Password Practices</h2>
-                <br><br><br><br>
-                <button id="Start" onclick="showModulePage()">Start</button>
-                <br>
-                <button class="Exit" onclick="window.location.href='modules.html';">Exit</button>
-            </div>
+      <div class="container1">
+        <div class="box1">
+          <br /><br />
+          <h2>Best Password Practices</h2>
+          <br /><br /><br /><br />
+          <button id="Start" onclick="showModulePage()">Start</button>
+          <br />
+          <button class="Exit" onclick="window.location.href='modules.html';">
+            Exit
+          </button>
         </div>
+      </div>
     </div>
 
-    <div class="slideshow" id="modulePage1" style="display: none;">
-        <div class="container2">
+    <div class="slideshow" id="modulePage1" style="display: none">
+      <div class="container2">
+        <div class="box2">
+          <h3>1/6</h3>
+          <button class="Exit1" onclick="window.location.href='module4.html';">
+            Exit
+          </button>
+          <br /><br />
 
-            <div class="box2">
-                <h3>1/6</h3>
-                <button class="Exit1" onclick="window.location.href='module4.html';">Exit</button>
-                <br><br>
+          <b>Best Password Practices</b>
+          <br /><br /><br /><br /><br />
 
-                <b>Best Password Practices</b>
-                <br><br><br><br><br>
+          <p>
+            Welcome to the Best Password Practices learning lesson! In this
+            lesson, we’ll teach you simple and easy ways to create strong
+            passwords and protect your personal information. By the end, you’ll
+            feel confident securing your accounts online and keeping them safe
+            from hackers.
+          </p>
+          <br /><br /><br /><br /><br />
 
-                <p>
-                    Welcome to the Best Password Practices learning lesson! In this lesson, we’ll 
-                    teach you simple and easy ways to create strong passwords and protect your personal 
-                    information. By the end, you’ll feel confident securing your accounts online and keeping them safe from hackers.
-                </p>
-                <br><br><br><br><br>
-
-                <button class="nav-button left" onclick="back1()">← Previous</button>
-                <button class="nav-button right" onclick="next1()">Next →</button>
-
-            </div>
+          <button class="nav-button left" onclick="back1()">← Previous</button>
+          <button class="nav-button right" onclick="next1()">Next →</button>
         </div>
+      </div>
     </div>
 
-    <div class="slideshow" id="modulePage2" style="display: none;">
-        <div class="container3">
+    <div class="slideshow" id="modulePage2" style="display: none">
+      <div class="container3">
+        <div class="box3">
+          <h3>2/6</h3>
+          <button class="Exit1" onclick="window.location.href='module4.html';">
+            Exit
+          </button>
+          <br /><br />
 
-            <div class="box3">
-                <h3>2/6</h3>
-                <button class="Exit1" onclick="window.location.href='module4.html';">Exit</button>
-                <br><br>
+          <b>What you'll learn</b>
+          <br /><br /><br /><br /><br />
 
-                <b>What you'll learn</b>
-                <br><br><br><br><br>
+          <p>
+            -How to create strong and secure passwords
+            <br />
+            -why using different passwords for each account is important
+            <br />
+            -tips for remembering and safely storing your passwords
+          </p>
+          <br /><br /><br /><br /><br />
 
-                <p>
-                    -How to create strong and secure passwords
-                    <br>
-                    -why using different passwords for each account is important
-                    <br>
-                    -tips for remembering and safely storing your passwords
-
-                </p>
-                <br><br><br><br><br>
-
-                <button class="nav-button left" onclick="back2()">← Previous</button>
-                <button class="nav-button right" onclick="next2()">Next →</button>
-
-            </div>
+          <button class="nav-button left" onclick="back2()">← Previous</button>
+          <button class="nav-button right" onclick="next2()">Next →</button>
         </div>
+      </div>
     </div>
 
-    <div class="slideshow" id="modulePage3" style="display: none;">
-        <div class="container4">
+    <div class="slideshow" id="modulePage3" style="display: none">
+      <div class="container4">
+        <div class="box4">
+          <h3>3/6</h3>
+          <button class="Exit1" onclick="window.location.href='module4.html';">
+            Exit
+          </button>
+          <br /><br />
 
-            <div class="box4">
-                <h3>3/6</h3>
-                <button class="Exit1" onclick="window.location.href='module4.html';">Exit</button>
-                <br><br>
+          <b>Creating a password</b>
+          <br /><br /><br /><br /><br />
 
-                <b>Creating a password</b>
-                <br><br><br><br><br>
+          <p>
+            A strong password is about 12 characters long, with a mix of
+            uppercase and lowercase letters, numbers, and symbols
+            <br />
+            -symbols include any of the following: ~`!
+            @#$%^&*()_-+={[}]|\:;"'<,>.?/
+            <br />
+            Passwords should be unique and hard to guess
+          </p>
+          <br /><br /><br /><br /><br />
 
-                <p>
-                    A strong password is about 12 characters long, with a mix of uppercase and lowercase letters, numbers, and symbols
-                    <br>
-                    -symbols include any of the following: ~`! @#$%^&*()_-+={[}]|\:;"'<,>.?/
-                    <br>
-                    Passwords should be unique and hard to guess
-
-                </p>
-                <br><br><br><br><br>
-
-                <button class="nav-button left" onclick="back3()">← Previous</button>
-                <button class="nav-button right" onclick="next3()">Next →</button>
-
-            </div>
+          <button class="nav-button left" onclick="back3()">← Previous</button>
+          <button class="nav-button right" onclick="next3()">Next →</button>
         </div>
+      </div>
     </div>
 
-    <div class="slideshow" id="modulePage4" style="display: none;">
-        <div class="container5">
+    <div class="slideshow" id="modulePage4" style="display: none">
+      <div class="container5">
+        <div class="box5">
+          <h3>4/6</h3>
+          <button class="Exit1" onclick="window.location.href='module4.html';">
+            Exit
+          </button>
+          <br /><br />
 
-            <div class="box5">
-                <h3>4/6</h3>
-                <button class="Exit1" onclick="window.location.href='module4.html';">Exit</button>
-                <br><br>
+          <b>Using different passwords</b>
+          <br /><br /><br />
 
-                <b>Using different passwords</b>
-                <br><br><br>
+          <p>
+            It's important to use a different password for every account you set
+            up so that if one password is stolen, your other accounts are still
+            protected.
+            <br />
+            Below are some more helpful reasons on why you should use different
+            passwords:
+            <br />
+            Prevents Identity Theft: If someone gets into your accounts with the
+            same password, they could steal your identity, open new accounts in
+            your name, or misuse your details.
+            <br />
+            Keeps Online Shopping Safe: Many websites store your payment
+            information. If a hacker gets into one of those accounts, they could
+            steal your money if you use the same password elsewhere.
+          </p>
+          <br /><br /><br />
 
-                <p>
-                    It's important to use a different password for every account you set up so that if one password is stolen, your other accounts are still protected.
-                    <br>
-                    Below are some more helpful reasons on why you should use different passwords:
-                    <br>
-                    Prevents Identity Theft: If someone gets into your accounts with the same password, they could steal your identity, open new accounts in your name, or misuse your details.
-                    <br>
-                    Keeps Online Shopping Safe: Many websites store your payment information. If a hacker gets into one of those accounts, they could steal your money if you use the same password elsewhere.
-                </p>
-                <br><br><br>
-
-                <button class="nav-button left" onclick="back4()">← Previous</button>
-                <button class="nav-button right" onclick="next4()">Next →</button>
-
-            </div>
+          <button class="nav-button left" onclick="back4()">← Previous</button>
+          <button class="nav-button right" onclick="next4()">Next →</button>
         </div>
+      </div>
     </div>
 
+    <div class="slideshow" id="modulePage5" style="display: none">
+      <div class="container6">
+        <div class="box6">
+          <h3>5/6</h3>
+          <button class="Exit1" onclick="window.location.href='module4.html';">
+            Exit
+          </button>
+          <br /><br />
 
-    <div class="slideshow" id="modulePage5" style="display: none;">
-        <div class="container6">
+          <b>What to do if you forget your password</b>
+          <br /><br /><br />
 
-            <div class="box6">
-                <h3>5/6</h3>
-                <button class="Exit1" onclick="window.location.href='module4.html';">Exit</button>
-                <br><br>
+          <p>
+            Don't panic if you forget your password. Most websites have easy
+            ways to help you get back into your account.
+            <br />
+            Look for a “forgot password” link. This will guide you through the
+            recovery process and typically emails you to reset your password
+            <br />
+            Answer security questions when creating accounts
+            <br />
+            -sometimes when you forget your password, you can answer security
+            questions to get into your account -these questions may include
+            things like your mother’s maiden name or the name of your first pet
+          </p>
+          <br /><br /><br /><br />
 
-                <b>What to do if you forget your password</b>
-                <br><br><br>
-
-                <p>
-                   Don't panic if you forget your password. Most websites have easy ways to help you get back into your account.
-                   <br> 
-                   Look for a “forgot password” link. This will guide you through the recovery process and typically emails you to reset your password
-                   <br> 
-                   Answer security questions when creating accounts
-                   <br>
-                    -sometimes when you forget your password, you can answer security questions to get into your account
-                    -these questions may include things like your mother’s maiden name or the name of your first pet
-
-                </p>
-                <br><br><br><br>
-
-                <button class="nav-button left" onclick="back5()">← Previous</button>
-                <button class="nav-button right" onclick="next5()">Next →</button>
-
-            </div>
+          <button class="nav-button left" onclick="back5()">← Previous</button>
+          <button class="nav-button right" onclick="next5()">Next →</button>
         </div>
+      </div>
     </div>
 
+    <div class="slideshow" id="modulePage6" style="display: none">
+      <div class="container7">
+        <div class="box7">
+          <h3>6/6</h3>
+          <button class="Exit1" onclick="window.location.href='module4.html';">
+            Exit
+          </button>
+          <br /><br />
 
-    <div class="slideshow" id="modulePage6" style="display: none;">
-        <div class="container7">
+          <b>Remembering and storing passwords</b>
+          <br /><br /><br />
 
-            <div class="box7">
-                <h3>6/6</h3>
-                <button class="Exit1" onclick="window.location.href='module4.html';">Exit</button>
-                <br><br>
+          <p>
+            Below are a few helpful tips to remember passwords and how to safely
+            store them.
+            <br />
+            Avoid Writing Them in Obvious Places: Don’t keep your passwords on
+            sticky notes stuck to your computer or phone. Someone could easily
+            find them.
+            <br />
+            Avoid Keeping It in Your Wallet or Purse: Don’t store your password
+            list in your wallet or purse, because if it's lost or stolen,
+            someone could access your accounts.
+            <br />
+            If you write your passwords on paper, try storing them in locked
+            drawers or safes.
+          </p>
+          <br /><br /><br /><br />
 
-                <b>Remembering and storing passwords</b>
-                <br><br><br>
-
-                <p>
-                    Below are a few helpful tips to remember passwords and how to safely store them.
-                    <br>
-                    Avoid Writing Them in Obvious Places: Don’t keep your passwords on sticky notes stuck to your computer or phone. Someone could easily find them.
-                    <br>
-                    Avoid Keeping It in Your Wallet or Purse: Don’t store your password list in your wallet or purse, because if it's lost or stolen, someone could access your accounts.
-                    <br>
-                    If you write your passwords on paper, try storing them in locked drawers or safes.
-                </p>
-                <br><br><br><br>
-
-                <button class="nav-button left" onclick="back6()">← Previous</button>
-                <button class="nav-button right" onclick="quiz1()">Quiz →</button>
-
-            </div>
+          <button class="nav-button left" onclick="back6()">← Previous</button>
+          <button class="nav-button right" onclick="quiz1()">Quiz →</button>
         </div>
+      </div>
     </div>
 
+    <div class="slideshow" id="quizpage1" style="display: none">
+      <div class="container12">
+        <div class="box12">
+          <h3>1/6</h3>
+          <button class="Exit1" onclick="window.location.href='module4.html';">
+            Exit
+          </button>
+          <br /><br />
+          <h4>1. What is the recommended length for a strong password?</h4>
+          <br /><br /><br />
 
-    <div class="slideshow" id="quizpage1" style="display: none;">
-        <div class="container12">
-            <div class="box12">
-                <h3>1/6</h3>
-                <button class="Exit1" onclick="window.location.href='module4.html';">Exit</button>
-                <br><br>
-                <h4>1. What is the recommended length for a strong password?</h4>
-                <br><br><br>
-    
-                <button id="button1" class="wrong" onclick="wrong1()">6</button>
-                <br>
-                <button id="button2" class="wrong" onclick="wrong2()">8</button>
-                <br>
-                <button id="button3" class="correct" onclick="wrong3()">10</button>
-                <br>
-                <button id="button4" class="wrong" onclick="correct()">12</button>
-                <br><br><br>
-    
-                <button class="nav-button left" onclick="back11()">← Module</button>
-                <button class="nav-button right" onclick="next11()">Next →</button>
-            </div>
+          <button id="button1" class="wrong" onclick="wrong1()">6</button>
+          <br />
+          <button id="button2" class="wrong" onclick="wrong2()">8</button>
+          <br />
+          <button id="button3" class="correct" onclick="wrong3()">10</button>
+          <br />
+          <button id="button4" class="wrong" onclick="correct()">12</button>
+          <br /><br /><br />
+
+          <button class="nav-button left" onclick="back11()">← Module</button>
+          <button class="nav-button right" onclick="next11()">Next →</button>
         </div>
-    </div>
-    
-    <div class="slideshow" id="quizpage2" style="display: none;">
-        <div class="container12">
-            <div class="box12">
-                <h3>2/6</h3>
-                <button class="Exit1" onclick="window.location.href='module4.html';">Exit</button>
-                <br><br>
-                <h4>What information should make up a password?</h4>
-                <br><br><br>
-    
-                <button id="button5" class="wrong" onclick="wrong4()">Birthdays</button>
-                <br>
-                <button id="button6" class="correct" onclick="wrong5()">Names</button>
-                <br>
-                <button id="button7" class="wrong" onclick="correct1()">random characters</button>
-                <br>
-                <button id="button8" class="wrong" onclick="wrong6()">Common words</button>
-                <br><br><br>
-    
-                <button class="nav-button left" onclick="back12()">← Module</button>
-                <button class="nav-button right" onclick="next12()">Next →</button>
-            </div>
-        </div>
-    </div>
-    
-    <div class="slideshow" id="quizpage3" style="display: none;">
-        <div class="container12">
-            <div class="box12">
-                <h3>3/6</h3>
-                <button class="Exit1" onclick="window.location.href='module4.html';">Exit</button>
-                <br><br>
-                <h4>Why is it important to use different passwords for each account?</h4>
-                <br><br><br>
-    
-                <button id="button9" class="correct" onclick="wrong7()">To keep your password the same across all websites for convience</button>
-                <br>
-                <button id="button10" class="wrong" onclick="wrong8()">So that you can avoid changing your password regularly</button>
-                <br>
-                <button id="button11" class="wrong" onclick="wrong9()">To make it easier to remember all your passwords</button>
-                <br>
-                <button id="button12" class="wrong" onclick="correct2()">To stop hackers from getting into multiple accounts</button>
-                <br><br><br>
-    
-                <button class="nav-button left" onclick="back13()">← Module</button>
-                <button class="nav-button right" onclick="next13()">Next →</button>
-            </div>
-        </div>
-    </div>
-    
-    <div class="slideshow" id="quizpage4" style="display: none;">
-        <div class="container12">
-            <div class="box12">
-                <h3>4/6</h3>
-                <button class="Exit1" onclick="window.location.href='module4.html';">Exit</button>
-                <br><br>
-                <h4>Where should you store passwords that are written on paper?</h4>
-                <br><br><br>
-    
-                <button id="button13" class="wrong" onclick="wrong10()">Hanging on your fridge</button>
-                <br>
-                <button id="button14" class="wrong" onclick="wrong11()">Under your keyboard</button>
-                <br>
-                <button id="button15" class="wrong" onclick="wrong12()">On your desk</button>
-                <br>
-                <button id="button16" class="correct" onclick="correct3()">In a safe or locked drawer</button>
-                <br><br><br>
-    
-                <button class="nav-button left" onclick="back14()">← Module</button>
-                <button class="nav-button right" onclick="next14()">Next →</button>
-            </div>
-        </div>
-    </div>
-    
-    <div class="slideshow" id="quizpage5" style="display: none;">
-        <div class="container12">
-            <div class="box12">
-                <h3>5/6</h3>
-                <button class="Exit1" onclick="window.location.href='module4.html';">Exit</button>
-                <br><br>
-                <h4>What should you do if you forget your password?</h4>
-                <br><br><br>
-    
-                <button id="button17" class="wrong" onclick="wrong13()">Keep trying random passwords</button>
-                <br>
-                <button id="button18" class="wrong" onclick="correct4()">Click on 'forgot password' and follow instructions to reset it</button>
-                <br>
-                <button id="button19" class="correct" onclick="wrong14()">Create a new account and forget about the old one</button>
-                <br>
-                <button id="button20" class="wrong" onclick="wrong15()">Ask strangers online what your password is</button>
-                <br><br><br>
-    
-                <button class="nav-button left" onclick="back15()">← Module</button>
-                <button class="nav-button right" onclick="next15()">Next →</button>
-            </div>
-        </div>
-    </div>
-    
-    <div class="slideshow" id="quizpage6" style="display: none;">
-        <div class="container12">
-            <div class="box12">
-                <h3>6/6</h3>
-                <button class="Exit1" onclick="window.location.href='module4.html';">Exit</button>
-                <br><br>
-                <h4>True or false: passwords should include letters, numbers, and special characters?</h4>
-                <br><br><br>
-                <button id="button23" class="wrong" onclick="correct5()">true</button>
-                <br>
-                <button id="button24" class="correct" onclick="wrong18()">false</button>
-                <br><br><br>
-    
-                <button class="nav-button left" onclick="back16()">← Module</button>
-            </div>
-        </div>
+      </div>
     </div>
 
+    <div class="slideshow" id="quizpage2" style="display: none">
+      <div class="container12">
+        <div class="box12">
+          <h3>2/6</h3>
+          <button class="Exit1" onclick="window.location.href='module4.html';">
+            Exit
+          </button>
+          <br /><br />
+          <h4>What information should make up a password?</h4>
+          <br /><br /><br />
 
+          <button id="button5" class="wrong" onclick="wrong4()">
+            Birthdays
+          </button>
+          <br />
+          <button id="button6" class="correct" onclick="wrong5()">Names</button>
+          <br />
+          <button id="button7" class="wrong" onclick="correct1()">
+            random characters
+          </button>
+          <br />
+          <button id="button8" class="wrong" onclick="wrong6()">
+            Common words
+          </button>
+          <br /><br /><br />
+
+          <button class="nav-button left" onclick="back12()">← Module</button>
+          <button class="nav-button right" onclick="next12()">Next →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="slideshow" id="quizpage3" style="display: none">
+      <div class="container12">
+        <div class="box12">
+          <h3>3/6</h3>
+          <button class="Exit1" onclick="window.location.href='module4.html';">
+            Exit
+          </button>
+          <br /><br />
+          <h4>
+            Why is it important to use different passwords for each account?
+          </h4>
+          <br /><br /><br />
+
+          <button id="button9" class="correct" onclick="wrong7()">
+            To keep your password the same across all websites for convience
+          </button>
+          <br />
+          <button id="button10" class="wrong" onclick="wrong8()">
+            So that you can avoid changing your password regularly
+          </button>
+          <br />
+          <button id="button11" class="wrong" onclick="wrong9()">
+            To make it easier to remember all your passwords
+          </button>
+          <br />
+          <button id="button12" class="wrong" onclick="correct2()">
+            To stop hackers from getting into multiple accounts
+          </button>
+          <br /><br /><br />
+
+          <button class="nav-button left" onclick="back13()">← Module</button>
+          <button class="nav-button right" onclick="next13()">Next →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="slideshow" id="quizpage4" style="display: none">
+      <div class="container12">
+        <div class="box12">
+          <h3>4/6</h3>
+          <button class="Exit1" onclick="window.location.href='module4.html';">
+            Exit
+          </button>
+          <br /><br />
+          <h4>Where should you store passwords that are written on paper?</h4>
+          <br /><br /><br />
+
+          <button id="button13" class="wrong" onclick="wrong10()">
+            Hanging on your fridge
+          </button>
+          <br />
+          <button id="button14" class="wrong" onclick="wrong11()">
+            Under your keyboard
+          </button>
+          <br />
+          <button id="button15" class="wrong" onclick="wrong12()">
+            On your desk
+          </button>
+          <br />
+          <button id="button16" class="correct" onclick="correct3()">
+            In a safe or locked drawer
+          </button>
+          <br /><br /><br />
+
+          <button class="nav-button left" onclick="back14()">← Module</button>
+          <button class="nav-button right" onclick="next14()">Next →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="slideshow" id="quizpage5" style="display: none">
+      <div class="container12">
+        <div class="box12">
+          <h3>5/6</h3>
+          <button class="Exit1" onclick="window.location.href='module4.html';">
+            Exit
+          </button>
+          <br /><br />
+          <h4>What should you do if you forget your password?</h4>
+          <br /><br /><br />
+
+          <button id="button17" class="wrong" onclick="wrong13()">
+            Keep trying random passwords
+          </button>
+          <br />
+          <button id="button18" class="wrong" onclick="correct4()">
+            Click on 'forgot password' and follow instructions to reset it
+          </button>
+          <br />
+          <button id="button19" class="correct" onclick="wrong14()">
+            Create a new account and forget about the old one
+          </button>
+          <br />
+          <button id="button20" class="wrong" onclick="wrong15()">
+            Ask strangers online what your password is
+          </button>
+          <br /><br /><br />
+
+          <button class="nav-button left" onclick="back15()">← Module</button>
+          <button class="nav-button right" onclick="next15()">Next →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="slideshow" id="quizpage6" style="display: none">
+      <div class="container12">
+        <div class="box12">
+          <h3>6/6</h3>
+          <button class="Exit1" onclick="window.location.href='module4.html';">
+            Exit
+          </button>
+          <br /><br />
+          <h4>
+            True or false: passwords should include letters, numbers, and
+            special characters?
+          </h4>
+          <br /><br /><br />
+          <button id="button23" class="wrong" onclick="correct5()">true</button>
+          <br />
+          <button id="button24" class="correct" onclick="wrong18()">
+            false
+          </button>
+          <br /><br /><br />
+
+          <button class="nav-button left" onclick="back16()">← Module</button>
+        </div>
+      </div>
+    </div>
 
     <script src="module4.js"></script>
-</body>
+  </body>
 </html>
