@@ -32,6 +32,23 @@ h1 {
   margin: 0; /* Remove any default margin */
 }
 
+.activity-description {
+  background-color: rgb(225, 234, 247); /* Light background for the description */
+  color: #000000; /* Darker text for better contrast */
+  padding: 20px 40px; /* Padding around the text */
+  margin: 0 auto 40px; /* Center it and add space below */
+  max-width: 800px; /* Max width for readability */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* A comfortable font size */
+  line-height: 1.6; /* Improved line height for readability */
+  text-align: left; /* Align text to the left */
+}
+
+.activity-description p {
+  margin-bottom: 15px; /* Spacing between the lines */
+}
+
+
 /* Navbar Styling */
 nav ul {
   list-style-type: none;
